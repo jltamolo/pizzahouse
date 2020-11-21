@@ -29,7 +29,13 @@
     @else
     <p>pizza is affordable</p>
     @endif
-
+    @unless($base == 'cheesy crust')
+    <p>you have no cheesy crust</p>
+    @endunless
+    @php
+    $name = 'Shaun';
+    echo($name);
+    @endphp        
         
     </body>
 </html>
