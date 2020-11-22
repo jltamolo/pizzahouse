@@ -16,19 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/pizzas', function () {
-    $pizzas = [
-        ['type' => 'hawaiian', 'base' => 'cheesycrust'],
-        ['type' => 'volcano', 'base' => 'garliccrust'],
-        ['type' => 'veg surprise', 'base' => 'thin and crispy']
-    ];
-
-    return view('pizzas',[
-        'pizzas' => $pizzas,
-        'name' => request('name'),
-        'age' => request('age')
-        ]);
-});
-Route::get('/pizzas/{id}', function ($id) {
-    return view('details', ['id' => $id]);
-});
+Route::get('/pizzas', 'PizzaController@index');
+Route::get('/pizzas/{id}', 'PizzaController@show');
+  
