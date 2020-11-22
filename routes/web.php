@@ -17,12 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/pizzas', function () {
-    $pizza = [
-        
-    'type' =>'hawaiian',
-    'base' => 'crusty crumb',
-    'price' => 10
-
+    $pizzas = [
+        ['type' => 'hawaiian', 'base' => 'cheesycrust'],
+        ['type' => 'volcano', 'base' => 'garliccrust'],
+        ['type' => 'veg surprise', 'base' => 'thin and crispy']
     ];
-    return view('pizzas',$pizza);
+
+    return view('pizzas',['pizzas' => $pizzas]);
 });

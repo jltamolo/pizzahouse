@@ -21,21 +21,14 @@
         </style>
     </head>
     <body class="antialiased">
-    <p>{{$type}}{{$base}}{{$price}}</p>
-    @if($price > 20)
-    <p>Pizza is expensive</p>
-    @elseif($price < 5)
-    <p>pizza is cheaap</p>
-    @else
-    <p>pizza is affordable</p>
-    @endif
-    @unless($base == 'cheesy crust')
-    <p>you have no cheesy crust</p>
-    @endunless
-    @php
-    $name = 'Shaun';
-    echo($name);
-    @endphp        
-        
+
+  <p>{{$type}}{{$base}}{{$price}}</p>
+   @for($i = 0; $i < 5; $i++)
+   <p>The value of i is {{$i}}</p>
+   @endfor
+
+   @for($i = 0; $i < count($pizzas); $i++)
+   <p>{{$pizzas[$i]['type']}}</p>
+   @endfor
     </body>
 </html>
