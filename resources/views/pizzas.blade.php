@@ -24,7 +24,7 @@
 
    @foreach($pizzas as $pizza)
    <div>
-            {{$pizza ['type']}} >> {{$pizza ['base']}}
+            {{$pizza['type']}} >> {{$pizza ['base']}}
    </div>
    @endforeach
     </body>
