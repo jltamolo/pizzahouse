@@ -31,5 +31,8 @@
     <input type="submit" value="Order Pizza">
   </form>
 </div>
+	<div>
+		<h1>YOUR PIZZA WILL BE DELIVERED SOON!</h1>
+	</div>
 
 @endsection
